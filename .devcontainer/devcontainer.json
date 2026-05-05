@@ -1,0 +1,28 @@
+{
+  "name": "Web II — Aula 05/05",
+  "image": "mcr.microsoft.com/devcontainers/go:1.22",
+  "features": {
+    "ghcr.io/devcontainers/features/postgres:1": {
+      "version": "15"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "containerEnv": {
+    "DATABASE_URL": "postgres://postgres:postgres@localhost:5432/aula?sslmode=disable",
+    "GOPATH": "/go",
+    "GOBIN": "/go/bin"
+  },
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/go/bin"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
