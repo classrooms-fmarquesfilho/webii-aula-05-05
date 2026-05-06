@@ -4,6 +4,9 @@ set -e
 echo "==> Criando banco 'aula'..."
 createdb -h /var/run/postgresql -U postgres aula 2>/dev/null || echo "  banco 'aula' já existe"
 
+echo "==> Aplicando schema..."
+psql "$DATABASE_URL" -f exercicio-a/db/schema/001_contacts.sql
+
 echo "==> Verificando conexão..."
 psql "$DATABASE_URL" -c "SELECT version();" | head -1
 
