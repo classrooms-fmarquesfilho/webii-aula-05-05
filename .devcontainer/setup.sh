@@ -35,4 +35,3 @@ grep -q '/go/bin' ~/.bashrc || echo 'export PATH=$PATH:/go/bin' >> ~/.bashrc
 echo ""
 echo "✅ Ambiente pronto!"
 echo "  DATABASE_URL=$DATABASE_URL"
-echo "  Próximos passos: cd exercicio-a && cat README.md"
