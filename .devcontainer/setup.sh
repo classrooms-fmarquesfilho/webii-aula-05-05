@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
+echo "==> Iniciando PostgreSQL..."
+sudo pg_ctlcluster 15 main start 2>/dev/null || true
+sleep 2
+
 echo "==> Criando banco 'aula'..."
 createdb -h /var/run/postgresql -U postgres aula 2>/dev/null || echo "  banco 'aula' já existe"
 
