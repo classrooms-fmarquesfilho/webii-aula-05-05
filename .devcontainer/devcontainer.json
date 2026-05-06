@@ -1,20 +1,16 @@
 {
   "name": "Web II — Aula 06/05",
-  "image": "mcr.microsoft.com/devcontainers/go:1.22",
-  "onCreateCommand": "bash .devcontainer/install.sh",
+  "build": { "dockerfile": "Dockerfile" },
   "postCreateCommand": "bash .devcontainer/setup.sh",
-  "postStartCommand": "pg_ctlcluster 15 main start 2>/dev/null || pg_ctlcluster 16 main start 2>/dev/null || true",
+  "postStartCommand": "pg_ctlcluster 15 main start 2>/dev/null || true",
   "containerEnv": {
     "DATABASE_URL": "postgres://postgres:postgres@localhost:5432/aula?sslmode=disable",
-    "PGPASSWORD": "postgres",
-    "PATH": "/usr/lib/postgresql/15/bin:/usr/lib/postgresql/16/bin:${PATH}:/go/bin"
+    "PGPASSWORD": "postgres"
   },
   "customizations": {
     "vscode": {
       "extensions": ["golang.go"],
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash"
-      }
+      "settings": { "terminal.integrated.defaultProfile.linux": "bash" }
     }
   }
 }
