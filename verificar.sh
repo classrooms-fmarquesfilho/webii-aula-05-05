@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# verificar.sh — rode este script para confirmar que tudo está funcionando
-# antes da aula. Deve terminar com "✅ Tudo pronto para a aula!"
 
 set -e
 PASS=0
@@ -121,7 +119,7 @@ if [ $FAIL -eq 0 ]; then
     echo ""
 else
     echo ""
-    echo "  ⚠️  Corrija os itens com ❌ antes da aula."
+    echo "  ⚠️  Corrija os itens com ❌."
     echo ""
     exit 1
 fi
