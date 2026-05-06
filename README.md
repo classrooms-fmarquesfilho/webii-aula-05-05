@@ -10,8 +10,6 @@
 2. Aguarde o setup terminar (~2 min) — Go, sqlc e PostgreSQL já estarão prontos
 3. Abra o terminal integrado e siga o README de cada exercício
 
-**No iPad**: abra o Codespace no Safari — funciona 100% via browser.
-
 ---
 
 ## Exercícios
