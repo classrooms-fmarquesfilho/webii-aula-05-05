@@ -1,16 +1,13 @@
 {
-  "name": "Web II — Aula 07/05",
+  "name": "Web II — Aula 06/05",
   "image": "mcr.microsoft.com/devcontainers/go:1.22",
-  "features": {
-    "ghcr.io/devcontainers/features/postgres:1": {
-      "version": "15",
-      "postgresPassword": "postgres"
-    }
-  },
+  "onCreateCommand": "bash .devcontainer/install.sh",
   "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "pg_ctlcluster 15 main start 2>/dev/null || pg_ctlcluster 16 main start 2>/dev/null || true",
   "containerEnv": {
     "DATABASE_URL": "postgres://postgres:postgres@localhost:5432/aula?sslmode=disable",
-    "PGPASSWORD": "postgres"
+    "PGPASSWORD": "postgres",
+    "PATH": "/usr/lib/postgresql/15/bin:/usr/lib/postgresql/16/bin:${PATH}:/go/bin"
   },
   "customizations": {
     "vscode": {
