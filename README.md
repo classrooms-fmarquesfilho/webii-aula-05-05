@@ -1,4 +1,4 @@
-# Aula 05/05/2026 — PostgreSQL + sqlc
+# Aula 07/05/2026 — PostgreSQL + sqlc
 
 ## DIM0547 — Desenvolvimento de Sistemas Web II com Go
 
